@@ -90,10 +90,18 @@
             <Style x:Key="EntryFrame"                       TargetType="Frame">
                 <Setter Property="HasShadow"                Value="True"/>
                 <Setter Property="BackgroundColor"          Value="{StaticResource BackgroundColor}"/>
-                <Setter Property="Margin"                   Value="5,10,5,10"/>
+                <Setter Property="Margin"                   Value="10,5,10,5"/>
                 <Setter Property="CornerRadius"             Value="5"/>
-                <Setter Property="Padding"                  Value="3"/>
-                <Setter Property="HeightRequest"            Value="25"/>
+                <Setter Property="Padding"                  Value="20"/>
+                <Setter Property="BorderColor"              Value="Orange"/>
+            </Style>
+
+            <Style x:Key="EntryLabel"                       TargetType="Label">
+                <Setter Property="FontSize"                 Value="{StaticResource TitleFontSize}"/>
+                <Setter Property="FontFamily"               Value="{StaticResource MediumFontFamily}"/>
+                <Setter Property="FontAttributes"           Value="Bold"/>
+                <Setter Property="VerticalTextAlignment"    Value="Start"/>
+                <Setter Property="HorizontalTextAlignment"  Value="Start"/>
             </Style>
 
 

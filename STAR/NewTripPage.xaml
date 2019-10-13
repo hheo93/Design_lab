@@ -5,11 +5,85 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="STAR.NewTripPage"
+             Title="Create New Trip"
              BackgroundColor="{StaticResource BackgroundColor}">
     
     <ContentPage.Content>
-        <StackLayout>
-            
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                
+                <!-- Pickup address Entry -->
+                <Frame  Style="{StaticResource EntryFrame}">
+                    <Grid RowSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        
+                        <Label Grid.Row="0" Style="{StaticResource EntryLabel}"
+                           Text="Enter pick up address"/>
+                        
+                        <Entry Grid.Row="1" 
+                               Placeholder="enter information here" 
+                               HorizontalTextAlignment="Center"/>
+                    </Grid>
+                </Frame>
+                
+                <!-- dropoff address Entry -->
+                <Frame  Style="{StaticResource EntryFrame}">
+                    <Grid RowSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Style="{StaticResource EntryLabel}"
+                           Text="Where are you headed?"/>
+
+                        <Entry Grid.Row="1" 
+                               Placeholder="enter information here" 
+                               HorizontalTextAlignment="Center"/>
+                    </Grid>
+                </Frame>
+                
+                <!-- Appointment Time -->
+                <Frame  Style="{StaticResource EntryFrame}">
+                    <Grid RowSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Style="{StaticResource EntryLabel}"
+                           Text="When do you want to go?"/>
+
+                        <Entry Grid.Row="1" 
+                               Placeholder="enter information here" 
+                               HorizontalTextAlignment="Center"/>
+                    </Grid>
+                </Frame>
+
+                <!-- Pickup address Entry -->
+                <Frame  Style="{StaticResource EntryFrame}">
+                    <Grid RowSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Style="{StaticResource EntryLabel}"
+                           Text="some question here..."/>
+
+                        <Entry Grid.Row="1" 
+                               Placeholder="enter information here" 
+                               HorizontalTextAlignment="Center"/>
+                    </Grid>
+                </Frame>
+
+                <Button BackgroundColor="DarkGreen" Text="Confirm" TextColor="White"
+                        CornerRadius="20" Margin="50, 40, 30, 50"/>
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
