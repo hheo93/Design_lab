@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="STAR.App">
+    <Application.Resources>
+        
+        <ResourceDictionary>
+            <!-- colors -->
+            <Color x:Key="HeaderTextColor">         #585858</Color>
+            <Color x:Key="BodyTextColor">           #36454f</Color>
+            <Color x:Key="HeaderBackgroundColor">   #0059b1</Color>
+            <Color x:Key="ButtonBackgroundColor">   #5B5A62</Color>
+            <Color x:Key="BackgroundColor">         white</Color>
+            <Color x:Key="FrameBackgroundColor">    #434343</Color>
+            <!--End colors-->
+
+            <!--Font Families-->
+            <OnPlatform x:Key="RegularFontFamily" x:TypeArguments="x:String">
+                <On Platform="iOS">HelveticaNeue</On>
+                <On Platform="Android">sans-serif</On>
+            </OnPlatform>
+
+            <OnPlatform x:Key="LightFontFamily" x:TypeArguments="x:String">
+                <On Platform="iOS">HelveticaNeue-Light</On>
+                <On Platform="Android">sans-serif-light</On>
+            </OnPlatform>
+            
+            <OnPlatform x:Key="MediumFontFamily" x:TypeArguments="x:String">
+                <On Platform="iOS">HelveticaNeue-Medium</On>
+                <On Platform="Android">sans-serif-medium</On>
+            </OnPlatform>
+            <!--End Font Families-->
+            
+            <!--Font Sizes-->
+            <x:Double x:Key="InfoFontSize">         18</x:Double>
+            <x:Double x:Key="TitleFontSize">        20</x:Double>
+            <x:Double x:Key="BodyFontSize">         20</x:Double>
+            <x:Double x:Key="TagTextFontSize">      18</x:Double>
+            <x:Double x:Key="ButtonFontSize">       24</x:Double>
+            <!--End Font Sizes-->
+            
+            <!-- Styles -->
+            <Style x:Key="ProfileNameLabel"                 TargetType="Label">
+                <Setter Property="TextColor"                Value="{StaticResource HeaderTextColor}"/>
+                <Setter Property="FontFamily"               Value="{StaticResource MediumFontFamily}"/>
+                <Setter Property="FontSize"                 Value="{StaticResource TitleFontSize}"/>
+                <Setter Property="HorizontalTextAlignment"  Value="Center"/>
+            </Style>
+
+            <Style x:Key="IDLabel"                          TargetType="Label">
+                <Setter Property="TextColor"                Value="{StaticResource HeaderTextColor}"/>
+                <Setter Property="FontFamily"               Value="{StaticResource RegularFontFamily}"/>
+                <Setter Property="FontSize"                 Value="{StaticResource TagTextFontSize}"/>
+                <Setter Property="HorizontalTextAlignment"  Value="Center"/>
+            </Style>
+
+            <Style x:Key="TripButton"                       TargetType="Button">
+                <Setter Property="TextColor"                Value="White"/>
+                <Setter Property="FontFamily"               Value="{StaticResource MediumFontFamily}"/>
+                <Setter Property="FontSize"                 Value="{StaticResource ButtonFontSize}"/>
+                <Setter Property="BackgroundColor"          Value="{StaticResource ButtonBackgroundColor}"/>
+                <Setter Property="FontAttributes"           Value="Bold"/>
+                <Setter Property="CornerRadius"             Value="5"/>
+                <Setter Property="Margin"                   Value="3"/>
+                <Setter Property="HeightRequest"            Value="120"/>
+                <Setter Property="WidthRequest"             Value="200"/>
+                <Setter Property="HorizontalOptions"        Value="Center"/>
+                <Setter Property="Opacity"                  Value=".9"/>
+            </Style>
+
+            <Style x:Key="InfoText"                         TargetType="Label">
+                <Setter Property="HorizontalTextAlignment"  Value="Center"/>
+                <Setter Property="TextColor"                Value="WhiteSmoke"/>
+                <Setter Property="FontSize"                 Value="{StaticResource InfoFontSize}"/>
+                <Setter Property="FontAttributes"           Value="Bold"/>
+            </Style>
+
+            <Style x:Key="InfoFrame"                        TargetType="Frame">
+                <Setter Property="HasShadow"                Value="True"/>
+                <Setter Property="BackgroundColor"          Value="{StaticResource FrameBackgroundColor}"/>
+                <Setter Property="Margin"                   Value="5,10,5,10"/>
+                <Setter Property="CornerRadius"             Value="5"/>
+                <Setter Property="Padding"                  Value="3"/>
+                <Setter Property="HeightRequest"            Value="25"/>
+            </Style>
+            
+            <Style x:Key="EntryFrame"                       TargetType="Frame">
+                <Setter Property="HasShadow"                Value="True"/>
+                <Setter Property="BackgroundColor"          Value="{StaticResource BackgroundColor}"/>
+                <Setter Property="Margin"                   Value="5,10,5,10"/>
+                <Setter Property="CornerRadius"             Value="5"/>
+                <Setter Property="Padding"                  Value="3"/>
+                <Setter Property="HeightRequest"            Value="25"/>
+            </Style>
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
