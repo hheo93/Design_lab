@@ -65,8 +65,8 @@
                 <Setter Property="FontAttributes"           Value="Bold"/>
                 <Setter Property="CornerRadius"             Value="5"/>
                 <Setter Property="Margin"                   Value="3"/>
-                <Setter Property="HeightRequest"            Value="120"/>
-                <Setter Property="WidthRequest"             Value="200"/>
+                <Setter Property="HeightRequest"            Value="100"/>
+                <Setter Property="WidthRequest"             Value="160"/>
                 <Setter Property="HorizontalOptions"        Value="Center"/>
                 <Setter Property="Opacity"                  Value=".9"/>
             </Style>
@@ -81,7 +81,7 @@
             <Style x:Key="InfoFrame"                        TargetType="Frame">
                 <Setter Property="HasShadow"                Value="True"/>
                 <Setter Property="BackgroundColor"          Value="{StaticResource FrameBackgroundColor}"/>
-                <Setter Property="Margin"                   Value="5,10,5,10"/>
+                <Setter Property="Margin"                   Value="10,10,10,10"/>
                 <Setter Property="CornerRadius"             Value="5"/>
                 <Setter Property="Padding"                  Value="3"/>
                 <Setter Property="HeightRequest"            Value="25"/>

@@ -8,122 +8,123 @@
              BackgroundColor="{StaticResource BackgroundColor}">
 
     <ScrollView>
-        <Grid RowSpacing="0" BackgroundColor="{StaticResource BackgroundColor}">
-            <Grid.RowDefinitions>
-                <!-- 0 -->
-                <RowDefinition Height="Auto"/>
-                <!-- 1 -->
-                <RowDefinition Height="Auto"/>
-                <!-- 2 -->
-                <RowDefinition Height="Auto"/>
-                <!-- 3 -->
-                <RowDefinition Height="Auto"/>
-                <!-- 4 -->
-                <RowDefinition Height="Auto"/>
-                <!-- 5 -->
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-
-            <!-- LOGO -->
-            <Frame  Grid.Row="0"    HasShadow="True"    CornerRadius="3"    Margin="7" 
-                    BackgroundColor="{StaticResource BackgroundColor}">
-                
-                <Image  Source="cdtalogo.jpg"
-                        HeightRequest="120"
-                        WidthRequest="250"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Start"/>
-            </Frame>
-            
-
-            <!--Profile information-->
-            <Frame Grid.Row="1" HasShadow="True"    Margin="5" BorderColor="MidnightBlue"
-                   CornerRadius="10"
-                   BackgroundColor="{StaticResource BackgroundColor}">
-                
-                <Grid   Padding="10,5,10,5"   BackgroundColor="{StaticResource BackgroundColor}">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Label  Grid.Column="1"     Text="Eric Cartman"     
-                            Style="{StaticResource ProfileNameLabel}"    Margin="80,0,0,0"
-                            VerticalTextAlignment="Start"   HorizontalTextAlignment="Start"/>
-                    <Label  Grid.Column="1"     Text="ID: 000111222"     
-                            Style="{StaticResource IDLabel}"     Margin="80,0,0,0"
-                            VerticalTextAlignment="Center"  HorizontalTextAlignment="Start"/>
-                    <Label Grid.Column="1"      Text="Address"
-                           Style="{StaticResource ProfileNameLabel}"     Margin="80,0,0,0"
-                           VerticalTextAlignment="End"   HorizontalTextAlignment="Start"/>
-                    <Image  Source ="eric.png"
-                            HorizontalOptions="Center" 
-                            WidthRequest="100"
-                            HeightRequest="100" 
-                            VerticalOptions="End"
-                            Grid.Column="0"/>
-
-                </Grid>
-            </Frame>
-
-            <Frame Grid.Row="2" Style="{StaticResource InfoFrame}">
-                <Label Text="Trip options" Style="{StaticResource InfoText}"/>
-            </Frame>
-
-
-            <!-- Options [ 3x2 ] -->
-            <Grid Grid.Row="3" RowSpacing="0" ColumnSpacing="0"     
-                  BackgroundColor="{StaticResource BackgroundColor}"
-                  HorizontalOptions="Center">
+        <StackLayout>
+            <Grid RowSpacing="0" BackgroundColor="{StaticResource BackgroundColor}">
                 <Grid.RowDefinitions>
+                    <!-- 0 -->
                     <RowDefinition Height="Auto"/>
+                    <!-- 1 -->
                     <RowDefinition Height="Auto"/>
+                    <!-- 2 -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- 3 -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- 4 -->
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
 
-                <Button  Text="Repeat"            Grid.Row="0"        Grid.Column="0"     
-                         BackgroundColor="DarkGoldenrod"
-                         Style="{StaticResource TripButton}" 
-                         Command="{Binding NavigateCommand}"
-                         CommandParameter="{x:Type local:TripHistory}"/>
+                <!-- LOGO -->
+                <Frame  Grid.Row="0"    HasShadow="True"    CornerRadius="3"    Margin="8" 
+                        BackgroundColor="{StaticResource BackgroundColor}">
+                    
+                    <Image  Source="cdtalogo.jpg"
+                            HeightRequest="120"
+                            WidthRequest="250"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Start"/>
+                </Frame>
                 
-                <Button  Text="New"               Grid.Row="0"        Grid.Column="1"      
-                         BackgroundColor="DarkGreen"
-                         Style="{StaticResource TripButton}"
-                         Command="{Binding NavigateCommand}"
-                         CommandParameter="{x:Type local:NewTripPage}"/>
 
-                <Button  Text="Cancel"            Grid.Row="2"        Grid.Column="1"     
-                         BackgroundColor="DarkRed"
-                         Style="{StaticResource TripButton}" 
-                         Command="{Binding NavigateCommand}"
-                         CommandParameter="{x:Type local:PendingTripPage}"/>
-                
-                <Button  Text="Pending"       Grid.Row="1"        Grid.Column="0"     
-                         BackgroundColor="Goldenrod"
-                         Style="{StaticResource TripButton}" 
-                         Command="{Binding NavigateCommand}"
-                         CommandParameter="{x:Type local:PendingTripPage}"/>
+                <!--Profile information-->
+                <Frame Grid.Row="1" HasShadow="True"    Margin="5" BorderColor="Orange"
+                       CornerRadius="10"
+                       BackgroundColor="{StaticResource BackgroundColor}">
+                    
+                    <Grid   Padding="13,5,13,5"   BackgroundColor="{StaticResource BackgroundColor}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
-                <Button  Text="Settings"           Grid.Row="2"        Grid.Column="0"     
-                         BackgroundColor="MidnightBlue"
-                         Style="{StaticResource TripButton}" 
-                         Command="{Binding NavigateCommand}"
-                         CommandParameter="{x:Type local:PendingTripPage}"/>
-               
-                <Button  Text="Upcoming"            Grid.Row="1"        Grid.Column="1"     
-                         BackgroundColor="ForestGreen"
-                         Style="{StaticResource TripButton}" 
-                         Command="{Binding NavigateCommand}"
-                         CommandParameter="{x:Type local:PendingTripPage}"/>
+                        <Label  Grid.Column="1"     Text="Eric Cartman"     
+                                Style="{StaticResource ProfileNameLabel}"    Margin="20,0,0,0"
+                                VerticalTextAlignment="Start"   HorizontalTextAlignment="Start"/>
+                        <Label  Grid.Column="1"     Text="ID: 000111222"     
+                                Style="{StaticResource IDLabel}"     Margin="20,0,0,0"
+                                VerticalTextAlignment="Center"  HorizontalTextAlignment="Start"/>
+                        <Label Grid.Column="1"      Text="NO UPCOMING TRIPS"
+                               TextColor="ForestGreen"  FontSize="16"   FontAttributes="Bold"
+                               Style="{StaticResource IDLabel}"     Margin="20,0,0,0"
+                               VerticalTextAlignment="End"   HorizontalTextAlignment="Start"/>
+                        <Image  Source ="eric.png"
+                                HorizontalOptions="Center" 
+                                WidthRequest="100"
+                                HeightRequest="100" 
+                                VerticalOptions="End"
+                                Grid.Column="0"/>
 
+                    </Grid>
+                </Frame>
+
+                <Frame Grid.Row="2" Style="{StaticResource InfoFrame}">
+                    <Label Text="Trip options" Style="{StaticResource InfoText}"/>
+                </Frame>
+
+
+                <!-- Options [ 3x2 ] -->
+                <Grid Grid.Row="3" RowSpacing="0" ColumnSpacing="0"     
+                      BackgroundColor="{StaticResource BackgroundColor}"
+                      HorizontalOptions="CenterAndExpand"   Margin="5"
+                      VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button  Text="Repeat"            Grid.Row="0"        Grid.Column="0"     
+                             BackgroundColor="DarkGoldenrod"
+                             Style="{StaticResource TripButton}" 
+                             Command="{Binding NavigateCommand}"
+                             CommandParameter="{x:Type local:TripHistory}"/>
+                    
+                    <Button  Text="New"               Grid.Row="0"        Grid.Column="1"      
+                             BackgroundColor="DarkGreen"
+                             Style="{StaticResource TripButton}"
+                             Command="{Binding NavigateCommand}"
+                             CommandParameter="{x:Type local:NewTripPage}"/>
+
+                    <Button  Text="Cancel"            Grid.Row="2"        Grid.Column="1"     
+                             BackgroundColor="DarkRed"
+                             Style="{StaticResource TripButton}" 
+                             Command="{Binding NavigateCommand}"
+                             CommandParameter="{x:Type local:PendingTripPage}"/>
+                    
+                    <Button  Text="Pending"       Grid.Row="1"        Grid.Column="0"     
+                             BackgroundColor="Goldenrod"
+                             Style="{StaticResource TripButton}" 
+                             Command="{Binding NavigateCommand}"
+                             CommandParameter="{x:Type local:PendingTripPage}"/>
+
+                    <Button  Text="Settings"           Grid.Row="2"        Grid.Column="0"     
+                             BackgroundColor="MidnightBlue"
+                             Style="{StaticResource TripButton}" 
+                             Command="{Binding NavigateCommand}"
+                             CommandParameter="{x:Type local:PendingTripPage}"/>
+                   
+                    <Button  Text="Upcoming"            Grid.Row="1"        Grid.Column="1"     
+                             BackgroundColor="ForestGreen"
+                             Style="{StaticResource TripButton}" 
+                             Command="{Binding NavigateCommand}"
+                             CommandParameter="{x:Type local:PendingTripPage}"/>
+
+                </Grid>
             </Grid>
-        </Grid>
+        </StackLayout>
     </ScrollView>
-
 
 </ContentPage>
