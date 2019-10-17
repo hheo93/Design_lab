@@ -3,12 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:STAR"
              mc:Ignorable="d"
              x:Class="STAR.NewTripPage"
              Title="Create New Trip"
              BackgroundColor="{StaticResource BackgroundColor}">
+
+    <ContentPage.BindingContext>
+        <local:ModelView/>
+    </ContentPage.BindingContext>
     
     <ContentPage.Content>
+        <!--CurrAddress
+            DestAddress
+            DatePicked
+            TimePicked-->
+        
         <ScrollView>
             <StackLayout>
                 
@@ -23,7 +33,7 @@
                         <Label  Grid.Row="0" Style="{StaticResource EntryLabel}"
                                 Text="Where are you?"/>
                         
-                        <Entry Grid.Row="1" 
+                        <Entry Grid.Row="1" x:Name="CurrAddress"
                                Placeholder="Enter your current location" 
                                HorizontalTextAlignment="Center"/>
                     </Grid>
@@ -40,7 +50,7 @@
                         <Label Grid.Row="0" Style="{StaticResource EntryLabel}"
                            Text="Where are you headed?"/>
 
-                        <Entry Grid.Row="1" 
+                        <Entry Grid.Row="1" x:Name="DestAddress"
                                Placeholder="Enter destination address" 
                                HorizontalTextAlignment="Center"/>
                     </Grid>
@@ -61,14 +71,15 @@
                         <Label Grid.Row="1"                 HorizontalOptions="StartAndExpand"
                                FontSize="16"                Style="{StaticResource EntryLabel}"
                                Text="Date:"/>
-                        <DatePicker Grid.Row="1"            HorizontalOptions="CenterAndExpand"
+                        <DatePicker Grid.Row="1"            x:Name="DatePicked"
+                                    HorizontalOptions="CenterAndExpand"
                                     Format="D"              TextColor="#0073e6"
                                     FontAttributes="Bold"   TranslationX="15"/>
 
                         <Label Grid.Row="2"                 HorizontalOptions="StartAndExpand"
-                               Text="Time:"            Style="{StaticResource EntryLabel}"
+                               Text="Time:"                 Style="{StaticResource EntryLabel}"
                                FontSize="16"/>
-                        <TimePicker Grid.Row="2"            x:Name="pickupTime"     
+                        <TimePicker Grid.Row="2"            x:Name="TimePicked"     
                                     Time="12:00"            HorizontalOptions="CenterAndExpand"
                                     Format="T"              TextColor="#0073e6"
                                     FontAttributes="Bold"   TranslationX="15"/>
@@ -77,8 +88,9 @@
                 </Frame>
 
                 <Button BackgroundColor="DarkGreen" 
-                        Text="Confirm"      TextColor="White" FontAttributes="Bold"
-                        CornerRadius="20"   Margin="50, 20,30, 50"/>
+                        Text="Verify"      TextColor="White" FontAttributes="Bold"
+                        CornerRadius="20"   Margin="50, 20,30, 50"
+                        Clicked="OnConfirmedAsync"/>
 
             </StackLayout>
         </ScrollView>
