@@ -12,9 +12,10 @@
             <Color x:Key="HeaderTextColor">         #585858</Color>
             <Color x:Key="BodyTextColor">           #36454f</Color>
             <Color x:Key="HeaderBackgroundColor">   #0059b1</Color>
-            <Color x:Key="ButtonBackgroundColor">   #5B5A62</Color>
+            <Color x:Key="ButtonBackgroundColor">   #0080ff</Color>
             <Color x:Key="BackgroundColor">         white</Color>
             <Color x:Key="FrameBackgroundColor">    #434343</Color>
+            <Color x:Key="FrameHeadColor">          #fffaf0</Color>
             <!--End colors-->
 
             <!--Font Families-->
@@ -73,17 +74,17 @@
 
             <Style x:Key="InfoText"                         TargetType="Label">
                 <Setter Property="HorizontalTextAlignment"  Value="Center"/>
-                <Setter Property="TextColor"                Value="WhiteSmoke"/>
+                <Setter Property="TextColor"                Value="#585858"/>
                 <Setter Property="FontSize"                 Value="{StaticResource InfoFontSize}"/>
                 <Setter Property="FontAttributes"           Value="Bold"/>
             </Style>
 
             <Style x:Key="InfoFrame"                        TargetType="Frame">
                 <Setter Property="HasShadow"                Value="True"/>
-                <Setter Property="BackgroundColor"          Value="{StaticResource FrameBackgroundColor}"/>
                 <Setter Property="Margin"                   Value="10,10,10,10"/>
                 <Setter Property="CornerRadius"             Value="5"/>
                 <Setter Property="Padding"                  Value="3"/>
+                <Setter Property="BorderColor"              Value="#f0f0f0"/>
                 <Setter Property="HeightRequest"            Value="25"/>
             </Style>
             
