@@ -62,10 +62,10 @@
                 <Setter Property="FontSize"                 Value="{StaticResource ButtonFontSize}"/>
                 <Setter Property="BackgroundColor"          Value="{StaticResource ButtonBackgroundColor}"/>
                 <Setter Property="FontAttributes"           Value="Bold"/>
-                <Setter Property="CornerRadius"             Value="20"/>
+                <Setter Property="CornerRadius"             Value="5"/>
                 <Setter Property="Margin"                   Value="3"/>
-                <Setter Property="HeightRequest"            Value="100"/>
-                <Setter Property="WidthRequest"             Value="160"/>
+                <Setter Property="HeightRequest"            Value="120"/>
+                <Setter Property="WidthRequest"             Value="180"/>
                 <Setter Property="HorizontalOptions"        Value="Center"/>
                 <Setter Property="Opacity"                  Value=".9"/>
             </Style>
@@ -91,7 +91,7 @@
                 <Setter Property="BackgroundColor"          Value="{StaticResource BackgroundColor}"/>
                 <Setter Property="Margin"                   Value="10,5,10,5"/>
                 <Setter Property="CornerRadius"             Value="5"/>
-                <Setter Property="Padding"                  Value="20"/>
+                <Setter Property="Padding"                  Value="15"/>
                 <Setter Property="BorderColor"              Value="Orange"/>
             </Style>
 

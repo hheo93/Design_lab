@@ -8,7 +8,7 @@
 
     <ScrollView>
         <StackLayout>
-            <Grid RowSpacing="0" BackgroundColor="{StaticResource BackgroundColor}">
+            <Grid RowSpacing="0">
                 <Grid.RowDefinitions>
                     <!-- 0 -->
                     <RowDefinition Height="Auto"/>
@@ -57,10 +57,8 @@
                         
                         <Image  Source ="eric.png"
                                 HorizontalOptions="Center" 
-                                WidthRequest="100"
-                                HeightRequest="100" 
-                                VerticalOptions="End"
-                                Grid.Column="0"/>
+                                WidthRequest="100"          HeightRequest="100" 
+                                VerticalOptions="End"       Grid.Column="0"/>
 
                     </Grid>
                 </Frame>
@@ -72,8 +70,7 @@
                 </Frame>
 
                 <!-- Options [ 3x2 ] -->
-                <Grid Grid.Row="3" RowSpacing="3" ColumnSpacing="5"     
-                      BackgroundColor="{StaticResource BackgroundColor}"
+                <Grid Grid.Row="3" RowSpacing="0" ColumnSpacing="0"     
                       HorizontalOptions="CenterAndExpand"   Margin="10"
                       VerticalOptions="CenterAndExpand">
                     <Grid.RowDefinitions>
@@ -88,23 +85,27 @@
                     <Button  Text="Repeat"            Grid.Row="0"        Grid.Column="0"     
                              Style="{StaticResource TripButton}" 
                              BackgroundColor="#ffae1a"
+                             TextColor="#815300"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:TripHistory}"/>
                     
                     <Button  Text="New"               Grid.Row="0"        Grid.Column="1"      
                              Style="{StaticResource TripButton}"
                              BackgroundColor="#00b359"
+                             TextColor="#004b00"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:NewTripPage}"/>
 
                     <Button  Text="Cancel"            Grid.Row="1"        Grid.Column="1"     
                              Style="{StaticResource TripButton}"
-                             BackgroundColor="#e60001"
+                             BackgroundColor="#ff3434"
+                             TextColor="#670001"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:PendingTripPage}"/>
 
                     <Button  Text="Settings"           Grid.Row="1"        Grid.Column="0"     
                              Style="{StaticResource TripButton}" 
+                             TextColor="#00274d"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:PendingTripPage}"/>
                 </Grid>
@@ -114,8 +115,7 @@
                     <Label Text="View" Style="{StaticResource InfoText}"/>
                 </Frame>
 
-                <Grid   Grid.Row="5" RowSpacing="0" ColumnSpacing="5"     
-                      BackgroundColor="{StaticResource BackgroundColor}"
+                <Grid   Grid.Row="5" ColumnSpacing="0"     
                       HorizontalOptions="CenterAndExpand"   Margin="10"
                       VerticalOptions="CenterAndExpand">
                     <Grid.RowDefinitions>
@@ -128,12 +128,14 @@
 
                     <Button  Text="Pending"       Grid.Row="0"        Grid.Column="0"     
                              Style="{StaticResource TripButton}" 
+                             TextColor="#815300"
                              BackgroundColor="#ffae1a"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:PendingTripPage}"/>
 
                     <Button  Text="Upcoming"            Grid.Row="0"        Grid.Column="1"     
                              Style="{StaticResource TripButton}" 
+                             TextColor="#004b00"
                              BackgroundColor="#00b359"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:PendingTripPage}"/>
