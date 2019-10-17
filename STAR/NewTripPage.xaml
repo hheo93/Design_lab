@@ -34,7 +34,7 @@
                                 Text="Where are you?"/>
                         
                         <Entry Grid.Row="1" x:Name="CurrAddress"
-                               Placeholder="Enter your current location" 
+                               Placeholder="Enter your current location"  PlaceholderColor="#0073e6"
                                HorizontalTextAlignment="Center"/>
                     </Grid>
                 </Frame>
@@ -51,7 +51,7 @@
                            Text="Where are you headed?"/>
 
                         <Entry Grid.Row="1" x:Name="DestAddress"
-                               Placeholder="Enter destination address" 
+                               Placeholder="Enter destination address"  PlaceholderColor="#0073e6"
                                HorizontalTextAlignment="Center"/>
                     </Grid>
                 </Frame>
@@ -68,21 +68,31 @@
                         <Label Grid.Row="0" Style="{StaticResource EntryLabel}"
                            Text="When do you want to go?"/>
 
-                        <Label Grid.Row="1"                 HorizontalOptions="StartAndExpand"
-                               FontSize="16"                Style="{StaticResource EntryLabel}"
+                        <Label Grid.Row="1"                 
+                               HorizontalOptions="StartAndExpand"
+                               FontSize="16"                
+                               Style="{StaticResource EntryLabel}"
                                Text="Date:"/>
-                        <DatePicker Grid.Row="1"            x:Name="DatePicked"
+                        
+                        <DatePicker Grid.Row="1"           
+                                    x:Name="DatePicked"
                                     HorizontalOptions="CenterAndExpand"
-                                    Format="D"              TextColor="#0073e6"
-                                    FontAttributes="Bold"   TranslationX="15"/>
+                                    Format="D"              
+                                    TextColor="#0073e6"
+                                    FontAttributes="Bold"   
+                                    TranslationX="15"/>
 
-                        <Label Grid.Row="2"                 HorizontalOptions="StartAndExpand"
-                               Text="Time:"                 Style="{StaticResource EntryLabel}"
-                               FontSize="16"/>
-                        <TimePicker Grid.Row="2"            x:Name="TimePicked"     
-                                    Time="12:00"            HorizontalOptions="CenterAndExpand"
-                                    Format="T"              TextColor="#0073e6"
-                                    FontAttributes="Bold"   TranslationX="15"/>
+                        <Label      Grid.Row="2"                 HorizontalOptions="StartAndExpand"
+                                    Text="Time:"                 Style="{StaticResource EntryLabel}"
+                                    FontSize="16"/>
+                        
+                        <TimePicker Grid.Row="2"            
+                                    x:Name="TimePicked"     
+                                    Time="12:00"            
+                                    HorizontalOptions="CenterAndExpand"
+                                    TextColor="#0073e6"
+                                    FontAttributes="Bold"   
+                                    TranslationX="15"/>
 
                     </Grid>
                 </Frame>
