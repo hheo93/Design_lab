@@ -20,9 +20,16 @@
                     <RowDefinition Height="Auto"/>
                     <!-- 4 -->
                     <RowDefinition Height="Auto"/>
+                    <!-- 5 -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- 6 -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- 7 -->
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <Frame  Style="{StaticResource InfoFrame}">
+                <!-- Profile Header -->
+                <Frame  Grid.Row="0"  Style="{StaticResource InfoFrame}">
                     <Label Style="{StaticResource InfoText}"
                            Text="Your Profile"/>
                 </Frame>
@@ -58,19 +65,18 @@
                     </Grid>
                 </Frame>
 
+                <!-- Button Header-->
                 <Frame Grid.Row="2" Style="{StaticResource InfoFrame}">
-                    <Label Text="Trip options" Style="{StaticResource InfoText}"
+                    <Label Text="Trip Options" Style="{StaticResource InfoText}"
                            FontFamily=""/>
                 </Frame>
 
-
                 <!-- Options [ 3x2 ] -->
-                <Grid Grid.Row="3" RowSpacing="0" ColumnSpacing="0"     
+                <Grid Grid.Row="3" RowSpacing="3" ColumnSpacing="5"     
                       BackgroundColor="{StaticResource BackgroundColor}"
                       HorizontalOptions="CenterAndExpand"   Margin="10"
                       VerticalOptions="CenterAndExpand">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
@@ -80,41 +86,60 @@
                     </Grid.ColumnDefinitions>
 
                     <Button  Text="Repeat"            Grid.Row="0"        Grid.Column="0"     
-                             BackgroundColor="DarkGoldenrod"
                              Style="{StaticResource TripButton}" 
+                             BackgroundColor="#ffae1a"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:TripHistory}"/>
                     
                     <Button  Text="New"               Grid.Row="0"        Grid.Column="1"      
-                             BackgroundColor="DarkGreen"
                              Style="{StaticResource TripButton}"
+                             BackgroundColor="#00b359"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:NewTripPage}"/>
 
-                    <Button  Text="Cancel"            Grid.Row="2"        Grid.Column="1"     
-                             BackgroundColor="DarkRed"
+                    <Button  Text="Cancel"            Grid.Row="1"        Grid.Column="1"     
                              Style="{StaticResource TripButton}"
-                             Command="{Binding NavigateCommand}"
-                             CommandParameter="{x:Type local:PendingTripPage}"/>
-                    
-                    <Button  Text="Pending"       Grid.Row="1"        Grid.Column="0"     
-                             BackgroundColor="Goldenrod"
-                             Style="{StaticResource TripButton}" 
+                             BackgroundColor="#e60001"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:PendingTripPage}"/>
 
-                    <Button  Text="Settings"           Grid.Row="2"        Grid.Column="0"     
+                    <Button  Text="Settings"           Grid.Row="1"        Grid.Column="0"     
                              Style="{StaticResource TripButton}" 
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:PendingTripPage}"/>
-                   
-                    <Button  Text="Upcoming"            Grid.Row="1"        Grid.Column="1"     
-                             BackgroundColor="ForestGreen"
+                </Grid>
+
+                <!-- Button Header -->
+                <Frame Grid.Row="4"     Style="{StaticResource InfoFrame}">
+                    <Label Text="View" Style="{StaticResource InfoText}"/>
+                </Frame>
+
+                <Grid   Grid.Row="5" RowSpacing="0" ColumnSpacing="5"     
+                      BackgroundColor="{StaticResource BackgroundColor}"
+                      HorizontalOptions="CenterAndExpand"   Margin="10"
+                      VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition   Width="Auto"/>
+                        <ColumnDefinition   Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button  Text="Pending"       Grid.Row="0"        Grid.Column="0"     
                              Style="{StaticResource TripButton}" 
+                             BackgroundColor="#ffae1a"
+                             Command="{Binding NavigateCommand}"
+                             CommandParameter="{x:Type local:PendingTripPage}"/>
+
+                    <Button  Text="Upcoming"            Grid.Row="0"        Grid.Column="1"     
+                             Style="{StaticResource TripButton}" 
+                             BackgroundColor="#00b359"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:PendingTripPage}"/>
 
                 </Grid>
+
             </Grid>
         </StackLayout>
     </ScrollView>

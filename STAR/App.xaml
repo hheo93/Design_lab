@@ -14,8 +14,6 @@
             <Color x:Key="HeaderBackgroundColor">   #0059b1</Color>
             <Color x:Key="ButtonBackgroundColor">   #0080ff</Color>
             <Color x:Key="BackgroundColor">         white</Color>
-            <Color x:Key="FrameBackgroundColor">    #434343</Color>
-            <Color x:Key="FrameHeadColor">          #fffaf0</Color>
             <!--End colors-->
 
             <!--Font Families-->
@@ -64,7 +62,7 @@
                 <Setter Property="FontSize"                 Value="{StaticResource ButtonFontSize}"/>
                 <Setter Property="BackgroundColor"          Value="{StaticResource ButtonBackgroundColor}"/>
                 <Setter Property="FontAttributes"           Value="Bold"/>
-                <Setter Property="CornerRadius"             Value="5"/>
+                <Setter Property="CornerRadius"             Value="20"/>
                 <Setter Property="Margin"                   Value="3"/>
                 <Setter Property="HeightRequest"            Value="100"/>
                 <Setter Property="WidthRequest"             Value="160"/>
@@ -104,7 +102,6 @@
                 <Setter Property="VerticalTextAlignment"    Value="Start"/>
                 <Setter Property="HorizontalTextAlignment"  Value="Start"/>
             </Style>
-
 
         </ResourceDictionary>
     </Application.Resources>
