@@ -16,5 +16,10 @@ namespace STAR
         {
             InitializeComponent();
         }
+
+        private void DatePicker_SizeChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -85,7 +85,7 @@
                     <Button  Text="Repeat"            Grid.Row="0"        Grid.Column="0"     
                              Style="{StaticResource TripButton}" 
                              BackgroundColor="#ffae1a"
-                             TextColor="#815300"
+                             TextColor="#684300"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:TripHistory}"/>
                     
@@ -122,13 +122,13 @@
                         <RowDefinition  Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition   Width="Auto"/>
-                        <ColumnDefinition   Width="Auto"/>
+                        <ColumnDefinition   Width="2*"/>
+                        <ColumnDefinition   Width="2*"/>
                     </Grid.ColumnDefinitions>
 
                     <Button  Text="Pending"       Grid.Row="0"        Grid.Column="0"     
                              Style="{StaticResource TripButton}" 
-                             TextColor="#815300"
+                             TextColor="#684300"
                              BackgroundColor="#ffae1a"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:PendingTripPage}"/>
