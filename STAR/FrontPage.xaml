@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:STAR"
              Title="Home"
              x:Class="STAR.FrontPage"
-             BackgroundColor="{StaticResource BackgroundColor}">
+             BackgroundColor="#f2f2f2">
 
     <ScrollView>
         <StackLayout>
@@ -42,44 +42,43 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <Label  Grid.Column="1"     Text="Eric Cartman"     
-                                Style="{StaticResource ProfileNameLabel}"    Margin="20,0,0,0"
+                        <Label  Grid.Column="1"      Text="Eric Cartman"     
+                                Style="{StaticResource ProfileNameLabel}"   Margin="20,0,0,0"
                                 VerticalTextAlignment="Start"   HorizontalTextAlignment="Start"/>
                         
                         <Label  Grid.Column="1"     Text="ID: 000111222"     
                                 Style="{StaticResource IDLabel}"     Margin="20,0,0,0"
                                 VerticalTextAlignment="Center"  HorizontalTextAlignment="Start"/>
                         
-                        <Label Grid.Column="1"      Text="NO UPCOMING TRIPS"
+                        <Label Grid.Column="1"      Text="NO UPCOMING TRIPS" 
                                TextColor="ForestGreen"  FontSize="16"   FontAttributes="Bold"
                                Style="{StaticResource IDLabel}"     Margin="20,0,0,0"
                                VerticalTextAlignment="End"   HorizontalTextAlignment="Start"/>
                         
                         <Image  Source ="eric.png"
-                                HorizontalOptions="Center" 
+                                HorizontalOptions="Center"  Aspect="AspectFit"
                                 WidthRequest="100"          HeightRequest="100" 
                                 VerticalOptions="End"       Grid.Column="0"/>
 
                     </Grid>
                 </Frame>
 
-                <!-- Button Header-->
+                <!-- Button Grid Header -->
                 <Frame Grid.Row="2" Style="{StaticResource InfoFrame}">
                     <Label Text="Trip Options" Style="{StaticResource InfoText}"
                            FontFamily=""/>
                 </Frame>
 
-                <!-- Options [ 3x2 ] -->
+                <!-- Trip Options Grid -->
                 <Grid Grid.Row="3" RowSpacing="0" ColumnSpacing="0"     
                       HorizontalOptions="CenterAndExpand"   Margin="10"
                       VerticalOptions="CenterAndExpand">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
                     <Button  Text="Repeat"            Grid.Row="0"        Grid.Column="0"     
@@ -88,7 +87,7 @@
                              TextColor="#684300"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:TripHistory}"/>
-                    
+
                     <Button  Text="New"               Grid.Row="0"        Grid.Column="1"      
                              Style="{StaticResource TripButton}"
                              BackgroundColor="#00b359"
@@ -96,18 +95,7 @@
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:NewTripPage}"/>
 
-                    <Button  Text="Cancel"            Grid.Row="1"        Grid.Column="1"     
-                             Style="{StaticResource TripButton}"
-                             BackgroundColor="#ff3434"
-                             TextColor="#670001"
-                             Command="{Binding NavigateCommand}"
-                             CommandParameter="{x:Type local:PendingTripPage}"/>
-
-                    <Button  Text="Settings"           Grid.Row="1"        Grid.Column="0"     
-                             Style="{StaticResource TripButton}" 
-                             TextColor="#00274d"
-                             Command="{Binding NavigateCommand}"
-                             CommandParameter="{x:Type local:PendingTripPage}"/>
+                    
                 </Grid>
 
                 <!-- Button Header -->
@@ -119,11 +107,11 @@
                       HorizontalOptions="CenterAndExpand"   Margin="10"
                       VerticalOptions="CenterAndExpand">
                     <Grid.RowDefinitions>
-                        <RowDefinition  Height="Auto"/>
+                        <RowDefinition  Height="*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition   Width="2*"/>
-                        <ColumnDefinition   Width="2*"/>
+                        <ColumnDefinition   Width="*"/>
+                        <ColumnDefinition   Width="*"/>
                     </Grid.ColumnDefinitions>
 
                     <Button  Text="Pending"       Grid.Row="0"        Grid.Column="0"     
@@ -139,7 +127,36 @@
                              BackgroundColor="#00b359"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:PendingTripPage}"/>
+                </Grid>
 
+                <!-- Button Header -->
+                <Frame Grid.Row="6"     Style="{StaticResource InfoFrame}">
+                    <Label Text="Tools" Style="{StaticResource InfoText}"/>
+                </Frame>
+
+                <Grid   Grid.Row="7" ColumnSpacing="0"     
+                      HorizontalOptions="CenterAndExpand"   Margin="10"
+                      VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition   Width="*"/>
+                        <ColumnDefinition   Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button  Text="Cancel"            Grid.Row="0"        Grid.Column="1"     
+                             Style="{StaticResource TripButton}"
+                             BackgroundColor="#ff3434"
+                             TextColor="#670001"
+                             Command="{Binding NavigateCommand}"
+                             CommandParameter="{x:Type local:PendingTripPage}"/>
+
+                    <Button  Text="Settings"           Grid.Row="0"        Grid.Column="0"     
+                             Style="{StaticResource TripButton}" 
+                             TextColor="#00274d"
+                             Command="{Binding NavigateCommand}"
+                             CommandParameter="{x:Type local:PendingTripPage}"/>
                 </Grid>
 
             </Grid>

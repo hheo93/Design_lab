@@ -9,9 +9,6 @@
              Title="Create New Trip"
              BackgroundColor="{StaticResource BackgroundColor}">
 
-    <ContentPage.BindingContext>
-        <local:ModelView/>
-    </ContentPage.BindingContext>
     
     <ContentPage.Content>
         <!--CurrAddress
@@ -31,10 +28,10 @@
                         </Grid.RowDefinitions>
                         
                         <Label  Grid.Row="0" Style="{StaticResource EntryLabel}"
-                                Text="Where are you?"/>
+                                Text="Pick Up Address:"/>
                         
                         <Entry Grid.Row="1" x:Name="CurrAddress"
-                               Placeholder="Enter your current location"  PlaceholderColor="#0073e6"
+                               IsTextPredictionEnabled="True"
                                HorizontalTextAlignment="Center"/>
                     </Grid>
                 </Frame>
@@ -48,10 +45,9 @@
                         </Grid.RowDefinitions>
 
                         <Label Grid.Row="0" Style="{StaticResource EntryLabel}"
-                           Text="Where are you headed?"/>
+                           Text="Drop-off address:"/>
 
                         <Entry Grid.Row="1" x:Name="DestAddress"
-                               Placeholder="Enter destination address"  PlaceholderColor="#0073e6"
                                HorizontalTextAlignment="Center"/>
                     </Grid>
                 </Frame>
@@ -66,7 +62,7 @@
                         </Grid.RowDefinitions>
 
                         <Label Grid.Row="0" Style="{StaticResource EntryLabel}"
-                           Text="When do you want to go?"/>
+                           Text="Pick Up Time"/>
 
                         <Label Grid.Row="1"                 
                                HorizontalOptions="StartAndExpand"

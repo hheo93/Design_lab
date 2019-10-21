@@ -131,6 +131,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\cdtalogo.jpg" />
+    <BundleResource Include="Resources\repeat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Cnew2.jpg" />
   </ItemGroup>
 </Project>
