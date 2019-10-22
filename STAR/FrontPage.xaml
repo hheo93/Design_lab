@@ -138,12 +138,12 @@
                     </Grid.ColumnDefinitions>
 
                     <Button  Text="Cancel"            Grid.Row="0"        Grid.Column="1"     
-                             Style="{StaticResource TripButton}"
+                             Style="{StaticResource TripButton}"    BackgroundColor="#ff3434"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:PendingTripPage}"/>
 
                     <Button  Text="Settings"           Grid.Row="0"        Grid.Column="0"     
-                             Style="{StaticResource TripButton}" 
+                             Style="{StaticResource TripButton}"    BackgroundColor="#282828"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:PendingTripPage}"/>
                 </Grid>
