@@ -83,15 +83,11 @@
 
                     <Button  Text="Repeat"            Grid.Row="0"        Grid.Column="0"     
                              Style="{StaticResource TripButton}" 
-                             BackgroundColor="#ffae1a"
-                             TextColor="#684300"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:TripHistory}"/>
 
                     <Button  Text="New"               Grid.Row="0"        Grid.Column="1"      
                              Style="{StaticResource TripButton}"
-                             BackgroundColor="#00b359"
-                             TextColor="#004b00"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:NewTripPage}"/>
 
@@ -116,15 +112,11 @@
 
                     <Button  Text="Pending"       Grid.Row="0"        Grid.Column="0"     
                              Style="{StaticResource TripButton}" 
-                             TextColor="#684300"
-                             BackgroundColor="#ffae1a"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:PendingTripPage}"/>
 
                     <Button  Text="Upcoming"            Grid.Row="0"        Grid.Column="1"     
-                             Style="{StaticResource TripButton}" 
-                             TextColor="#004b00"
-                             BackgroundColor="#00b359"
+                             Style="{StaticResource TripButton}"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:PendingTripPage}"/>
                 </Grid>
@@ -147,14 +139,11 @@
 
                     <Button  Text="Cancel"            Grid.Row="0"        Grid.Column="1"     
                              Style="{StaticResource TripButton}"
-                             BackgroundColor="#ff3434"
-                             TextColor="#670001"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:PendingTripPage}"/>
 
                     <Button  Text="Settings"           Grid.Row="0"        Grid.Column="0"     
                              Style="{StaticResource TripButton}" 
-                             TextColor="#00274d"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:PendingTripPage}"/>
                 </Grid>

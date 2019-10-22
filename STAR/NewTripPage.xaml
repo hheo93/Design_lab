@@ -20,7 +20,7 @@
             <StackLayout>
                 
                 <!-- Pickup address Entry -->
-                <Frame  Style="{StaticResource EntryFrame}"     Margin="5,20,5,10">
+                <Frame  Style="{StaticResource EntryFrame}" Margin="10,10,2,10">
                     <Grid RowSpacing="20">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
@@ -32,7 +32,7 @@
                         
                         <Entry Grid.Row="1" x:Name="CurrAddress"
                                IsTextPredictionEnabled="True"
-                               HorizontalTextAlignment="Center"/>
+                               HorizontalTextAlignment="Start"/>
                     </Grid>
                 </Frame>
                 
@@ -45,10 +45,10 @@
                         </Grid.RowDefinitions>
 
                         <Label Grid.Row="0" Style="{StaticResource EntryLabel}"
-                           Text="Drop-off address:"/>
+                           Text="Destination:"/>
 
                         <Entry Grid.Row="1" x:Name="DestAddress"
-                               HorizontalTextAlignment="Center"/>
+                               HorizontalTextAlignment="Start"/>
                     </Grid>
                 </Frame>
                 
@@ -83,16 +83,48 @@
                                     FontSize="16"/>
                         
                         <TimePicker Grid.Row="2"            
-                                    x:Name="TimePicked"     
+                                    x:Name="TimePicked"  
                                     Time="12:00"            
                                     HorizontalOptions="CenterAndExpand"
                                     TextColor="#0073e6"
                                     FontAttributes="Bold"   
                                     TranslationX="15"/>
-
                     </Grid>
                 </Frame>
 
+                <Frame Style="{StaticResource EntryFrame}">
+                    <Grid RowSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition  Height="Auto"/>
+                            <RowDefinition  Height="Auto"/>
+                            <RowDefinition  Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label      Grid.Row="0"    Style="{StaticResource EntryLabel}"
+                                    Text="Method of Payment:"   Margin="0,0,0,10" />
+
+                        <CheckBox   Grid.Row="1"      
+                                    HorizontalOptions="End"     Margin="0,0,40,0"
+                                    IsChecked="False" CheckedChanged="CheckBox_CheckedChanged"/>
+
+                        <Label      Grid.Row="1"
+                                    Style="{StaticResource EntryLabel}" FontAttributes="None"
+                                    FontSize="16"               Margin="20,0,0,0"
+                                    Text="STAR Tickets " 
+                                    HorizontalOptions="Start"/>
+                        
+                        <CheckBox   Grid.Row="2"
+                                    HorizontalOptions="End"     Margin="0,0,40,0"
+                                    IsChecked="False"    CheckedChanged="PaymentCheck"/>
+                        
+                        <Label      Grid.Row="2" 
+                                    Style="{StaticResource EntryLabel}" FontAttributes="None"
+                                    FontSize="16"               Margin="20,0,0,0"
+                                    Text="Pay on Pick Up"
+                                    HorizontalOptions="Start"/>
+
+                    </Grid>
+                </Frame>
                 <Button BackgroundColor="DarkGreen" 
                         Text="Verify"      TextColor="White" FontAttributes="Bold"
                         CornerRadius="20"   Margin="50, 20,30, 50"

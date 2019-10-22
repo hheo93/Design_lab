@@ -12,7 +12,7 @@
             <Color x:Key="HeaderTextColor">         #585858</Color>
             <Color x:Key="BodyTextColor">           #36454f</Color>
             <Color x:Key="HeaderBackgroundColor">   #0059b1</Color>
-            <Color x:Key="ButtonBackgroundColor">   #0080ff</Color>
+            <Color x:Key="ButtonBackgroundColor">   #0074e6</Color>
             <Color x:Key="BackgroundColor">         #f2f2f2</Color>
             <!--End colors-->
 
@@ -57,14 +57,15 @@
             </Style>
 
             <Style x:Key="TripButton"                       TargetType="Button">
-                <Setter Property="TextColor"                Value="White"/>
+                <Setter Property="TextColor"                Value="#e2e2e2"/>
                 <Setter Property="FontFamily"               Value="{StaticResource MediumFontFamily}"/>
                 <Setter Property="FontSize"                 Value="{StaticResource ButtonFontSize}"/>
                 <Setter Property="BackgroundColor"          Value="{StaticResource ButtonBackgroundColor}"/>
                 <Setter Property="FontAttributes"           Value="Bold"/>
-                <Setter Property="CornerRadius"             Value="3"/>
+                <Setter Property="CornerRadius"             Value="10"/>
                 <Setter Property="Margin"                   Value="2"/>
-                <Setter Property="HeightRequest"            Value="120"/>
+                <Setter Property="Padding"                  Value="5,10,5,10"/>
+                <Setter Property="HeightRequest"            Value="100"/>
                 <Setter Property="WidthRequest"             Value="190"/>
                 <Setter Property="HorizontalOptions"        Value="Center"/>
                 <Setter Property="Opacity"                  Value=".9"/>
@@ -79,7 +80,7 @@
 
             <Style x:Key="InfoFrame"                        TargetType="Frame">
                 <Setter Property="HasShadow"                Value="True"/>
-                <Setter Property="Margin"                   Value="10,10,10,10"/>
+                <Setter Property="Margin"                   Value="10,10,10,5"/>
                 <Setter Property="CornerRadius"             Value="5"/>
                 <Setter Property="Padding"                  Value="3"/>
                 <Setter Property="BorderColor"              Value="#f0f0f0"/>
@@ -88,16 +89,16 @@
             
             <Style x:Key="EntryFrame"                       TargetType="Frame">
                 <Setter Property="HasShadow"                Value="True"/>
-                <Setter Property="Margin"                   Value="10,5,10,5"/>
+                <Setter Property="Margin"                   Value="10,2,10,2"/>
                 <Setter Property="CornerRadius"             Value="5"/>
                 <Setter Property="Padding"                  Value="15"/>
-                <Setter Property="BorderColor"              Value="Orange"/>
+                <Setter Property="BorderColor"              Value="#00b359"/>
             </Style>
 
             <Style x:Key="EntryLabel"                       TargetType="Label">
                 <Setter Property="FontSize"                 Value="{StaticResource TitleFontSize}"/>
                 <Setter Property="FontFamily"               Value="{StaticResource MediumFontFamily}"/>
-                <Setter Property="FontAttributes"           Value="Bold, italic"/>
+                <Setter Property="FontAttributes"           Value="Bold"/>
                 <Setter Property="VerticalTextAlignment"    Value="Start"/>
                 <Setter Property="HorizontalTextAlignment"  Value="Start"/>
             </Style>

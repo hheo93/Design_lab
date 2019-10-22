@@ -12,6 +12,7 @@ namespace STAR
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewTripPage : ContentPage
     {
+        string PayMethod = "";
         public NewTripPage()
         {
             InitializeComponent();
@@ -28,8 +29,19 @@ namespace STAR
                                                                                 + "Date: " + temp
                                                                                 + Environment.NewLine + Environment.NewLine
                                                                                 + "Time: " + temp2, "Confirm", "Cancel");
-
         }
 
+        void PaymentCheck(object sender, EventArgs args)
+        {
+            unchecked
+            {
+
+            }
+        }
+
+        private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+
+        }
     }
 }
