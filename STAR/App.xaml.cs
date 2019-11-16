@@ -1,6 +1,5 @@
 ﻿using System;
 using Xamarin.Forms;
-using STAR.ViewModels;
 using Xamarin.Forms.Xaml;
 
 namespace STAR

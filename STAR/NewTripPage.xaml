@@ -9,34 +9,79 @@
              Title="Create New Trip"
              BackgroundColor="{StaticResource BackgroundColor}">
 
-    
+
     <ContentPage.Content>
         <!--CurrAddress
             DestAddress
             DatePicked
-            TimePicked-->
-        
+            TimePicked -->
+
         <ScrollView>
             <StackLayout>
-                
-                <!-- Pickup address Entry -->
-                <Frame  Style="{StaticResource EntryFrame}" Margin="10,10,2,10">
+                <!-- Pickup address Entry-->
+                <Frame  Style="{StaticResource EntryFrame}" Margin="0,10,0,0">
                     <Grid RowSpacing="20">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        
-                        <Label  Grid.Row="0" Style="{StaticResource EntryLabel}"
+
+                        <Label  Grid.Row="0" 
+                                Style="{StaticResource EntryLabel}"
                                 Text="Pick Up Address:"/>
-                        
-                        <Entry Grid.Row="1" x:Name="CurrAddress"
+
+                        <Entry Grid.Row="1" 
+                               x:Name="CurrAddress"
                                IsTextPredictionEnabled="True"
-                               HorizontalTextAlignment="Start"/>
+                               HorizontalTextAlignment="Start"
+                               Text="{Binding pickaddress}"/>
                     </Grid>
                 </Frame>
-                
-                <!-- dropoff address Entry -->
+
+                <!-- Pick Up Time -->
+                <Frame  Style="{StaticResource EntryFrame}">
+                    <Grid RowSpacing="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label      Grid.Row="0" Style="{StaticResource EntryLabel}"
+                                    Text="Pick Up Time"/>
+
+                        <Label      Grid.Row="1"                 
+                                    HorizontalOptions="StartAndExpand"
+                                    FontSize="16"                
+                                    Style="{StaticResource EntryLabel}"
+                                    Text="Date:"/>
+
+                        <DatePicker Grid.Row="1"           
+                                    x:Name="PickupDateSelector"
+                                    Date="{Binding ThePickDate}"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Format="D"              
+                                    TextColor="#009e9d"
+                                    FontAttributes="Bold"   
+                                    TranslationX="15"/>
+
+                        <Label      Grid.Row="2"                 
+                                    Style="{StaticResource EntryLabel}"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="Time:"                 
+                                    FontSize="16"/>
+
+                        <TimePicker Grid.Row="2"            
+                                    x:Name="PickupTimeSelector"
+                                    Time="{x:Binding NewTripViewModel.PickTime, Mode=TwoWay}"            
+                                    HorizontalOptions="CenterAndExpand"
+                                    TextColor="#009e9d"
+                                    FontAttributes="Bold"   
+                                    TranslationX="15"/>
+                    </Grid>
+                </Frame>
+
+                <!-- dropoff address Entry-->
                 <Frame  Style="{StaticResource EntryFrame}">
                     <Grid RowSpacing="20">
                         <Grid.RowDefinitions>
@@ -44,54 +89,84 @@
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
 
-                        <Label Grid.Row="0" Style="{StaticResource EntryLabel}"
-                           Text="Destination:"/>
+                        <Label  Grid.Row="0" Style="{StaticResource EntryLabel}"
+                                Text="Destination:"/>
 
                         <Entry Grid.Row="1" x:Name="DestAddress"
                                HorizontalTextAlignment="Start"/>
                     </Grid>
                 </Frame>
-                
-                <!-- Appointment Time -->
+
+                <!-- Return address Entry-->
                 <Frame  Style="{StaticResource EntryFrame}">
                     <Grid RowSpacing="20">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
 
-                        <Label Grid.Row="0" Style="{StaticResource EntryLabel}"
-                           Text="Pick Up Time"/>
+                        <Label  Grid.Row="0" Style="{StaticResource EntryLabel}"
+                                Text="Return (If Applicable):"/>
 
-                        <Label Grid.Row="1"                 
-                               HorizontalOptions="StartAndExpand"
-                               FontSize="16"                
-                               Style="{StaticResource EntryLabel}"
-                               Text="Date:"/>
-                        
-                        <DatePicker Grid.Row="1"           
-                                    x:Name="DatePicked"
+                        <CheckBox   Grid.Row="1"      
+                                    HorizontalOptions="End"     
+                                    Margin="0,0,20,0"       Scale="1.5"
+                                    IsChecked="False"       />
+
+                        <Label      Grid.Row="1"
+                                    Style="{StaticResource EntryLabel}" 
+                                    FontAttributes="None"
+                                    FontSize="16"
+                                    Margin="0,3,0,0"    TextColor="#4e5a65"
+                                    Text="Return Address same as Pick Up"
+                                    HorizontalOptions="Start"/>
+
+                        <Label      Grid.Row="2" 
+                                    Style="{StaticResource EntryLabel}"
+                                    Text="- OR ENTER ADDRESS BELOW -"
+                                    HorizontalOptions="Center"
+                                    FontSize="16"   TextColor="#4e5a65"/>
+
+                        <Entry      Grid.Row="3" x:Name="ReturnAddress"
+                                    HorizontalTextAlignment="Start"/>
+
+                        <Label      Grid.Row="4"                 
+                                    HorizontalOptions="StartAndExpand"
+                                    FontSize="16"                
+                                    Style="{StaticResource EntryLabel}"
+                                    Text="Date:"/>
+
+                        <DatePicker Grid.Row="4"           
+                                    x:Name="ReturnDatePicked"
                                     HorizontalOptions="CenterAndExpand"
                                     Format="D"              
-                                    TextColor="#0073e6"
+                                    TextColor="#009e9d"
                                     FontAttributes="Bold"   
                                     TranslationX="15"/>
 
-                        <Label      Grid.Row="2"                 HorizontalOptions="StartAndExpand"
-                                    Text="Time:"                 Style="{StaticResource EntryLabel}"
+                        <Label      Grid.Row="5"                 
+                                    Style="{StaticResource EntryLabel}"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="Time:"                 
                                     FontSize="16"/>
-                        
-                        <TimePicker Grid.Row="2"            
-                                    x:Name="TimePicked"  
+
+                        <TimePicker Grid.Row="5"            
+                                    x:Name="ReturnTimePicked"  
                                     Time="12:00"            
                                     HorizontalOptions="CenterAndExpand"
-                                    TextColor="#0073e6"
+                                    TextColor="#009e9d"
                                     FontAttributes="Bold"   
                                     TranslationX="15"/>
                     </Grid>
                 </Frame>
 
+
+
+                <!-- PCA information -->
                 <Frame Style="{StaticResource EntryFrame}">
                     <Grid RowSpacing="10">
                         <Grid.RowDefinitions>
@@ -100,34 +175,95 @@
                             <RowDefinition  Height="Auto"/>
                         </Grid.RowDefinitions>
 
-                        <Label      Grid.Row="0"    Style="{StaticResource EntryLabel}"
+                        <Label      Grid.Row="0"
+                                    Style="{StaticResource EntryLabel}"
+                                    Text="Will there be a PCA with you?
+                                    (Personal Care Assitant)"   
+                                    Margin="0,0,0,10" />
+
+                        <CheckBox   Grid.Row="1"      
+                                    HorizontalOptions="Start"     
+                                    Margin="60,0,0,0"           Scale="1.5"
+                                    IsChecked="False" />
+
+                        <Label      Grid.Row="1"
+                                    Style="{StaticResource EntryLabel}"
+                                    FontAttributes="None"
+                                    FontSize="16"               Margin="25,3,0,0"
+                                    Text="Yes"                  TextColor="#4e5a65"
+                                    HorizontalOptions="Start"/>
+
+                        <CheckBox   Grid.Row="1"      
+                                    HorizontalOptions="End"
+                                    Margin="0,0,30,0"           Scale="1.5"
+                                    IsChecked="False"           />
+
+                        <Label      Grid.Row="1"
+                                    Style="{StaticResource EntryLabel}"
+                                    FontAttributes="None"
+                                    FontSize="16"               Margin="0,3,70,0"
+                                    Text="No"                   TextColor="#4e5a65"
+                                    HorizontalOptions="End"/>
+
+                    </Grid>
+                </Frame>
+
+                <!-- Payment information Entry -->
+                <Frame Style="{StaticResource EntryFrame}">
+                    <Grid RowSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition  Height="Auto"/>
+                            <RowDefinition  Height="Auto"/>
+                            <RowDefinition  Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label      Grid.Row="0"    
+                                    Style="{StaticResource EntryLabel}"
                                     Text="Method of Payment:"   Margin="0,0,0,10" />
 
                         <CheckBox   Grid.Row="1"      
-                                    HorizontalOptions="End"     Margin="0,0,40,0"
-                                    IsChecked="False" CheckedChanged="CheckBox_CheckedChanged"/>
+                                    HorizontalOptions="End"     Margin="0,0,40,0"   Scale="1.5"
+                                    IsChecked="False"           />
 
                         <Label      Grid.Row="1"
-                                    Style="{StaticResource EntryLabel}" FontAttributes="None"
+                                    Style="{StaticResource EntryLabel}" 
+                                    FontAttributes="None"
                                     FontSize="16"               Margin="20,0,0,0"
-                                    Text="STAR Tickets " 
+                                    Text="STAR Tickets "        TextColor="#4e5a65"
                                     HorizontalOptions="Start"/>
-                        
+
                         <CheckBox   Grid.Row="2"
-                                    HorizontalOptions="End"     Margin="0,0,40,0"
-                                    IsChecked="False"    CheckedChanged="PaymentCheck"/>
-                        
+                                    HorizontalOptions="End"     Margin="0,0,40,0"   Scale="1.5"
+                                    IsChecked="False"           />
+
                         <Label      Grid.Row="2" 
-                                    Style="{StaticResource EntryLabel}" FontAttributes="None"
+                                    Style="{StaticResource EntryLabel}" 
+                                    FontAttributes="None"
                                     FontSize="16"               Margin="20,0,0,0"
-                                    Text="Pay on Pick Up"
+                                    Text="Pay on Pick Up"       TextColor="#4e5a65"
                                     HorizontalOptions="Start"/>
 
                     </Grid>
                 </Frame>
+
+                <!-- Comment Section -->
+                <Frame Style="{StaticResource EntryFrame}">
+                    <Grid RowSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition  Height="Auto"/>
+                            <RowDefinition  Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0"     Style="{StaticResource EntryLabel}"
+                               Text="Additional Instructions (Optional)"/>
+                        <Editor Grid.Row="1"    HeightRequest="100" x:Name="Comments"/>
+                    </Grid>
+                </Frame>
+
+                <!-- Confirmation Button -->
                 <Button BackgroundColor="DarkGreen" 
                         Text="Verify"      TextColor="White" FontAttributes="Bold"
-                        CornerRadius="20"   Margin="50, 20,30, 50"
+                        CornerRadius="20"   Margin="50, 20,30, 10"
                         Clicked="OnConfirmedAsync"/>
 
             </StackLayout>

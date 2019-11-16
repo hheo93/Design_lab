@@ -35,7 +35,7 @@
                 </Frame>
                 <!--Profile information-->
                 <Frame Grid.Row="1" HasShadow="True"    Margin="10" CornerRadius="5" BorderColor="#f0f0f0">
-                    
+
                     <Grid   Margin="5">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
@@ -45,16 +45,16 @@
                         <Label  Grid.Column="1"      Text="Eric Cartman"     
                                 Style="{StaticResource ProfileNameLabel}"   Margin="20,0,0,0"
                                 VerticalTextAlignment="Start"   HorizontalTextAlignment="Start"/>
-                        
+
                         <Label  Grid.Column="1"     Text="ID: 000111222"     
                                 Style="{StaticResource IDLabel}"     Margin="20,0,0,0"
                                 VerticalTextAlignment="Center"  HorizontalTextAlignment="Start"/>
-                        
+
                         <Label Grid.Column="1"      Text="NO UPCOMING TRIPS" 
                                TextColor="ForestGreen"  FontSize="16"   FontAttributes="Bold"
                                Style="{StaticResource IDLabel}"     Margin="20,0,0,0"
                                VerticalTextAlignment="End"   HorizontalTextAlignment="Start"/>
-                        
+
                         <Image  Source ="eric.png"
                                 HorizontalOptions="Center"  Aspect="AspectFit"
                                 WidthRequest="100"          HeightRequest="100" 
@@ -65,7 +65,8 @@
 
                 <!-- Button Grid Header -->
                 <Frame Grid.Row="2" Style="{StaticResource InfoFrame}">
-                    <Label Text="Trip Options" Style="{StaticResource InfoText}" />
+                    <Label Text="Trip Options" Style="{StaticResource InfoText}"
+                           FontFamily=""/>
                 </Frame>
 
                 <!-- Trip Options Grid -->
@@ -90,7 +91,7 @@
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:NewTripPage}"/>
 
-                    
+
                 </Grid>
 
                 <!-- Button Header -->
@@ -144,7 +145,7 @@
                     <Button  Text="Settings"           Grid.Row="0"        Grid.Column="0"     
                              Style="{StaticResource TripButton}"    BackgroundColor="#282828"
                              Command="{Binding NavigateCommand}"
-                             CommandParameter="{x:Type local:PendingTripPage}"/>
+                             CommandParameter="{x:Type local:Settings}"/>
                 </Grid>
 
             </Grid>
