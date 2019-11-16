@@ -65,8 +65,7 @@
 
                 <!-- Button Grid Header -->
                 <Frame Grid.Row="2" Style="{StaticResource InfoFrame}">
-                    <Label Text="Trip Options" Style="{StaticResource InfoText}"
-                           FontFamily=""/>
+                    <Label Text="Trip Options" Style="{StaticResource InfoText}" />
                 </Frame>
 
                 <!-- Trip Options Grid -->
