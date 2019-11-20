@@ -9,13 +9,33 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand">
 
-            <Label Text="Enter login information">
-            </Label>
-            <Entry Placeholder="Username">
-            </Entry>
-            <Entry Placeholder="Password">
-            </Entry>
-            <Button Text="Authenticate"/>
+            <Frame  Style="{StaticResource EntryFrame}" Margin="5,0,5,0">
+                <Entry  x:Name="LOGIN_STARID"
+                        IsTextPredictionEnabled="True"
+                        HorizontalTextAlignment="Center"
+                        Margin="10"
+                        Placeholder="STAR ID"
+                        Text="{Binding LoginSTARID}"/>
+            </Frame>
+
+            <Frame  Style="{StaticResource EntryFrame}" Margin="5,0,5,0">
+                <Entry  x:Name="LOGIN_LASTNAME"
+                        IsTextPredictionEnabled="True"
+                        HorizontalTextAlignment="Center"
+                        Margin="10"
+                        Placeholder="Last Name"
+                        Text="{Binding LoginLastName}"/>
+            </Frame>
+
+            <Frame  Style="{StaticResource EntryFrame}" Margin="5,0,5,0">
+                <Entry  x:Name="LOGIN_DOB"
+                        IsTextPredictionEnabled="True"
+                        HorizontalTextAlignment="Center"
+                        Margin="10"
+                        Placeholder="Last Name"
+                        Keyboard="Numeric"
+                        Text="{Binding LoginDOB}"/>
+            </Frame>
 
         </StackLayout>
     </ContentPage.Content>
