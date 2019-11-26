@@ -4,10 +4,15 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             BackgroundColor="#323232"
              x:Class="STAR.LoginPage">
     
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand">
+
+            <Frame Style="{StaticResource InfoFrame}">
+                <Label Style="{StaticResource InfoText}" Text="Login"/>
+            </Frame>
 
             <Frame  Style="{StaticResource EntryFrame}" Margin="5,0,5,0">
                 <Entry  x:Name="LOGIN_STARID"
@@ -32,10 +37,25 @@
                         IsTextPredictionEnabled="True"
                         HorizontalTextAlignment="Center"
                         Margin="10"
-                        Placeholder="Last Name"
+                        Placeholder="Date Of Birth"
                         Keyboard="Numeric"
                         Text="{Binding LoginDOB}"/>
             </Frame>
+
+            <!-- Confirmation Button -->
+            <Button BackgroundColor="DarkGreen" 
+                        Text="Login"      TextColor="White" FontAttributes="Bold"
+                        CornerRadius="10"   Margin="10, 20,10, 10"
+                        Clicked="OnConfirmedAsync"/>
+
+            <Frame Style="{StaticResource InfoFrame}">
+                <Label Style="{StaticResource InfoText}" Text="OR Create New Account"/>
+            </Frame>
+
+            <Button BackgroundColor="Red" 
+                        Text="Create New Account"      TextColor="White" FontAttributes="Bold"
+                        CornerRadius="10"   Margin="10, 20, 10, 10"
+                        Clicked="OnConfirmedAsync"/>
 
         </StackLayout>
     </ContentPage.Content>
