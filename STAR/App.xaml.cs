@@ -10,7 +10,7 @@ namespace STAR
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new FrontPage())
+            MainPage = new NavigationPage(new LoginPage())
             {
                 BarBackgroundColor = Color.FromHex("#00009a")
             };

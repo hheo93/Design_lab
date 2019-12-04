@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:local="clr-namespace:STAR"
              BackgroundColor="#323232"
              x:Class="STAR.LoginPage">
     
@@ -46,7 +47,8 @@
             <Button BackgroundColor="DarkGreen" 
                         Text="Login"      TextColor="White" FontAttributes="Bold"
                         CornerRadius="10"   Margin="10, 20,10, 10"
-                        Clicked="OnConfirmedAsync"/>
+                        Command="{Binding NavigateCommand}"
+                        CommandParameter="{x:Type local:FrontPage}"/>
 
             <Frame Style="{StaticResource InfoFrame}">
                 <Label Style="{StaticResource InfoText}" Text="OR Create New Account"/>
@@ -54,8 +56,7 @@
 
             <Button BackgroundColor="Red" 
                         Text="Create New Account"      TextColor="White" FontAttributes="Bold"
-                        CornerRadius="10"   Margin="10, 20, 10, 10"
-                        Clicked="OnConfirmedAsync"/>
+                        CornerRadius="10"   Margin="10, 20, 10, 10"/>
 
         </StackLayout>
     </ContentPage.Content>

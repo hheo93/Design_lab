@@ -20,7 +20,6 @@ namespace STAR
                 Page page = (Page)Activator.CreateInstance(pageType);
                 await Navigation.PushAsync(page);
             });
-
             BindingContext = this;
         }
 
