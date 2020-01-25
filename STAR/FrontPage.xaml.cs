@@ -15,6 +15,7 @@ namespace STAR
         public FrontPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             NavigateCommand = new Command<Type>(async (Type pageType) =>
             {
                 Page page = (Page)Activator.CreateInstance(pageType);

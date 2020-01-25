@@ -16,6 +16,7 @@ namespace STAR
         public NewTripPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         async void OnConfirmedAsync(object sender, EventArgs args)

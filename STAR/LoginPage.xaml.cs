@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.WindowsAzure.MobileServices;
 using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Data.SqlClient;
 
 namespace STAR
 {
@@ -15,15 +17,16 @@ namespace STAR
         public LoginPage()
         {
             InitializeComponent();
-            NavigateCommand = new Command<Type>(async (Type pageType) =>
-            {
-                Page page = (Page)Activator.CreateInstance(pageType);
-                await Navigation.PushAsync(page);
-            });
-            BindingContext = this;
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
-        // void TempLogin() => new NavigationPage(new FrontPage());
-        public ICommand NavigateCommand { private set; get; }
+        async void OnLoginClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new FrontPage());
+        }
+        async void OnCreateClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Registration());
+        }
     }
 }

@@ -6,14 +6,79 @@
              mc:Ignorable="d"
              x:Class="STAR.Registration">
     <ContentPage.Content>
-        <StackLayout>
-            <!--First Name
-                Last Name
-                STAR ID
-                Confirm STAR ID
-                Phone Number
-                Home Address
-                Date of Birth-->
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+
+                <Frame Style="{StaticResource InfoFrame}"
+                   HeightRequest="50">
+                    <Label Style="{StaticResource InfoText}" Text="Register An Account"
+                       FontSize="25" VerticalTextAlignment="Center"
+                       TextColor="DarkGreen"/>
+                </Frame>
+
+                <Frame  Style="{StaticResource EntryFrame}" Margin="10,0,10,0"
+                    CornerRadius="5">
+                    <Entry  x:Name="REG_STARID"
+                        IsTextPredictionEnabled="True"
+                        HorizontalTextAlignment="Center"
+                        Margin="10"
+                        Placeholder="Enter STAR ID"/>
+                </Frame>
+
+                <Frame  Style="{StaticResource EntryFrame}" Margin="10,0,10,0"
+                    CornerRadius="5">
+                    <Entry  x:Name="REG_FIRSTNAME"
+                        IsTextPredictionEnabled="True"
+                        HorizontalTextAlignment="Center"
+                        Margin="10"
+                        Placeholder="Enter First Name"/>
+                </Frame>
+
+                <Frame  Style="{StaticResource EntryFrame}" Margin="10,0,10,0"
+                    CornerRadius="5">
+                    <Entry  x:Name="REG_LASTNAME"
+                        IsTextPredictionEnabled="True"
+                        HorizontalTextAlignment="Center"
+                        Margin="10"
+                        Placeholder="Enter Last Name"/>
+                </Frame>
+
+                <Frame  Style="{StaticResource EntryFrame}" Margin="10,0,10,0"
+                    CornerRadius="5">
+                    <Entry  x:Name="REG_EMAIL"
+                        IsTextPredictionEnabled="True"
+                        HorizontalTextAlignment="Center"
+                        Margin="10"
+                        Placeholder="Enter Email Address"/>
+                </Frame>
+
+                <Frame  Style="{StaticResource EntryFrame}" Margin="10,0,10,0"
+                    CornerRadius="5">
+                    <Entry  x:Name="REG_DOB"
+                        IsTextPredictionEnabled="True"
+                        HorizontalTextAlignment="Center"
+                        Margin="10"
+                        Placeholder="Date Of Birth"
+                        Keyboard="Numeric"/>
+                </Frame>
+
+                <Frame  Style="{StaticResource EntryFrame}" Margin="10,0,10,0"
+                    CornerRadius="5">
+                    <Entry  x:Name="REG_ADD"
+                        IsTextPredictionEnabled="True"
+                        HorizontalTextAlignment="Center"
+                        Margin="10"
+                        Placeholder="Enter Home Address"/>
+                </Frame>
+
+                <!-- Confirmation Button -->
+                <Button BackgroundColor="Red" 
+                        Text="Register Account" TextColor="White" FontAttributes="Bold"
+                        FontSize="20"
+                        CornerRadius="10"   Margin="10, 30,10, 10"
+                        Clicked="OnRegisterClicked"/>
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

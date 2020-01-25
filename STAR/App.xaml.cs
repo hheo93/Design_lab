@@ -9,10 +9,9 @@ namespace STAR
         public App()
         {
             InitializeComponent();
-
             MainPage = new NavigationPage(new LoginPage())
             {
-                BarBackgroundColor = Color.FromHex("#00009a")
+                BarBackgroundColor = Color.White, Title = "Login"
             };
         }
 
