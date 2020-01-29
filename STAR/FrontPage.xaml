@@ -48,12 +48,12 @@
                         </Grid.ColumnDefinitions>
 
                         <Label  Grid.Column="0"      Grid.Row="0"
-                                Text="Eric Cartman"     
+                                x:Name="Display_Name"
                                 Style="{StaticResource ProfileNameLabel}"
                                 VerticalTextAlignment="Start"   HorizontalTextAlignment="Start"/>
 
                         <Label  Grid.Column="0"     Grid.Row="1"
-                                Text="ID: 000111222"     
+                                x:Name="Display_ID"
                                 Style="{StaticResource IDLabel}"
                                 VerticalTextAlignment="Center"  HorizontalTextAlignment="Start"/>
 
