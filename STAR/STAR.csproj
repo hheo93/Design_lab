@@ -11,8 +11,11 @@
 
   <ItemGroup>
     <Compile Remove="Controls\**" />
+    <Compile Remove="Model\**" />
     <EmbeddedResource Remove="Controls\**" />
+    <EmbeddedResource Remove="Model\**" />
     <None Remove="Controls\**" />
+    <None Remove="Model\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -67,9 +70,5 @@
     <EmbeddedResource Update="TripHistory.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Model\" />
   </ItemGroup>
 </Project>
