@@ -43,8 +43,9 @@
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
 
                         <Label  Grid.Column="0"      Grid.Row="0"
@@ -59,21 +60,21 @@
 
                         <Label Grid.Column="1"      Grid.Row="0"
                                Text="UPCOMING TRIPS: 0" 
-                               TextColor="ForestGreen"  FontSize="16"   FontAttributes="Bold"
-                               Style="{StaticResource IDLabel}"     Margin="20,0,0,0"
-                               VerticalTextAlignment="End"   HorizontalTextAlignment="Start"/>
+                               TextColor="ForestGreen"  FontAttributes="Bold"
+                               Style="{StaticResource IDLabel}"     Margin="0,0,0,0"
+                               VerticalTextAlignment="End"   HorizontalTextAlignment="End"/>
 
                         <Label Grid.Column="1"      Grid.Row="1"
                                Text="PENDING TRIPS: 0" 
-                               TextColor="#ffaa00"  FontSize="16"   FontAttributes="Bold"
-                               Style="{StaticResource IDLabel}"     Margin="20,0,0,0"
-                               VerticalTextAlignment="End"   HorizontalTextAlignment="Start"/>
+                               TextColor="#ffaa00"     FontAttributes="Bold"
+                               Style="{StaticResource IDLabel}"     Margin="0,0,0,0"
+                               VerticalTextAlignment="End"   HorizontalTextAlignment="End"/>
 
                         <Label Grid.Column="1"      Grid.Row="2"
                                Text="CANCELLED TRIPS: 0" 
-                               TextColor="Red"  FontSize="16"   FontAttributes="Bold"
-                               Style="{StaticResource IDLabel}"     Margin="20,0,0,0"
-                               VerticalTextAlignment="End"   HorizontalTextAlignment="Start"/>
+                               TextColor="Red"    FontAttributes="Bold"
+                               Style="{StaticResource IDLabel}"     Margin="0,0,0,0"
+                               VerticalTextAlignment="End"   HorizontalTextAlignment="End"/>
 
                     </Grid>
                 </Frame>
@@ -98,11 +99,13 @@
 
                     <Button  Text="Repeat"            Grid.Row="0"        Grid.Column="0"     
                              Style="{StaticResource TripButton}" 
+                             BackgroundColor="#ffaa00"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:TripHistory}"/>
 
                     <Button  Text="New"               Grid.Row="0"        Grid.Column="1"      
                              Style="{StaticResource TripButton}"
+                             BackgroundColor="ForestGreen"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:NewTripPage}"/>
 
@@ -127,11 +130,13 @@
 
                     <Button  Text="Pending"       Grid.Row="0"        Grid.Column="0"     
                              Style="{StaticResource TripButton}" 
+                             BackgroundColor="#ffaa00"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:PendingTripPage}"/>
 
                     <Button  Text="Upcoming"            Grid.Row="0"        Grid.Column="1"     
                              Style="{StaticResource TripButton}"
+                             BackgroundColor="ForestGreen" FontSize="33"
                              Command="{Binding NavigateCommand}"
                              CommandParameter="{x:Type local:PendingTripPage}"/>
                 </Grid>

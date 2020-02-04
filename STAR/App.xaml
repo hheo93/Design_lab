@@ -35,10 +35,10 @@
 
             <!--Font Sizes-->
             <x:Double x:Key="InfoFontSize">18</x:Double>
-            <x:Double x:Key="TitleFontSize">20</x:Double>
+            <x:Double x:Key="TitleFontSize">22</x:Double>
             <x:Double x:Key="BodyFontSize">20</x:Double>
             <x:Double x:Key="TagTextFontSize">18</x:Double>
-            <x:Double x:Key="ButtonFontSize">30</x:Double>
+            <x:Double x:Key="ButtonFontSize">34</x:Double>
             <!--End Font Sizes-->
 
             <!-- Styles -->
@@ -52,7 +52,7 @@
             <Style x:Key="IDLabel"                          TargetType="Label">
                 <Setter Property="TextColor"                Value="{StaticResource HeaderTextColor}"/>
                 <Setter Property="FontFamily"               Value="{StaticResource RegularFontFamily}"/>
-                <Setter Property="FontSize"                 Value="{StaticResource TagTextFontSize}"/>
+                <Setter Property="FontSize"                 Value="{StaticResource TitleFontSize}"/>
                 <Setter Property="HorizontalTextAlignment"  Value="Center"/>
             </Style>
 
@@ -64,7 +64,7 @@
                 <Setter Property="FontAttributes"           Value="Bold"/>
                 <Setter Property="CornerRadius"             Value="10"/>
                 <Setter Property="Margin"                   Value="2"/>
-                <Setter Property="Padding"                  Value="5,10,5,10"/>
+                <Setter Property="Padding"                  Value="2,5,2,5"/>
                 <Setter Property="HeightRequest"            Value="100"/>
                 <Setter Property="WidthRequest"             Value="190"/>
                 <Setter Property="HorizontalOptions"        Value="Center"/>
