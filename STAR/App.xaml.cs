@@ -9,7 +9,12 @@ namespace STAR
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new LoginPage());
+            MainPage = new NavigationPage(new LoginPage()) 
+            {
+                BarBackgroundColor = Color.FromHex("#800080"),
+                BarTextColor = Color.Gold,
+                
+            };
         }
 
         protected override void OnStart()

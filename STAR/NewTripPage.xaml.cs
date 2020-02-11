@@ -16,7 +16,6 @@ namespace STAR
         public NewTripPage()
         {
             InitializeComponent();
-            NavigationPage.SetHasBackButton(this, true);
         }
 
         async void OnConfirmedAsync(object sender, EventArgs args)

@@ -15,7 +15,6 @@ namespace STAR
         public Settings()
         {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

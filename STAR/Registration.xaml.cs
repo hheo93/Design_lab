@@ -18,7 +18,6 @@ namespace STAR
         public Registration()
         {
             InitializeComponent();
-            NavigationPage.SetHasBackButton(this, true);
         }
 
         // Function for validating user entries

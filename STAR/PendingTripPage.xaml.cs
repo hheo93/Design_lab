@@ -15,7 +15,6 @@ namespace STAR
         public PendingTripPage()
         {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

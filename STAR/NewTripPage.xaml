@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:STAR"
              mc:Ignorable="d"
              x:Class="STAR.NewTripPage"
-             Title="Create New Trip"
+             Title="CREATE NEW TRIP"
              BackgroundColor="{StaticResource BackgroundColor}">
 
 
@@ -261,9 +261,10 @@
                 </Frame>
 
                 <!-- Confirmation Button -->
-                <Button BackgroundColor="DarkGreen" 
-                        Text="Verify"      TextColor="White" FontAttributes="Bold"
+                <Button BackgroundColor="#800080" 
+                        Text="Verify"      TextColor="Gold" FontAttributes="Bold"
                         CornerRadius="20"   Margin="50, 20,30, 10"
+                        HeightRequest="50"
                         Clicked="OnConfirmedAsync"/>
 
             </StackLayout>

@@ -18,7 +18,7 @@ namespace STAR
         public FrontPage(string SID0, string lastname0)
         {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
+            
             Online_SID = SID0;              // Initialize StarID
             Online_lastname = lastname0;    // Initialize Lastname
             RetrieveAccount();              // Retrieve and display account info

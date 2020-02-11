@@ -58,7 +58,7 @@ namespace STAR
             if(found)
             {
                 await DisplayAlert("Login Success", "Account found - Redirecting to front page", "Ok");
-                await Navigation.PushAsync(new NavigationPage(new FrontPage(SID, lastname)));
+                await Navigation.PushAsync(new FrontPage(SID, lastname));
             }
             else
             {

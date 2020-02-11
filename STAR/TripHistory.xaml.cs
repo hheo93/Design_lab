@@ -15,7 +15,6 @@ namespace STAR
         public TripHistory()
         {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }
