@@ -73,7 +73,8 @@
 
                         <TimePicker Grid.Row="2"            
                                     x:Name="PickupTimeSelector"
-                                    Time="{x:Binding NewTripViewModel.PickTime, Mode=TwoWay}"            
+                                    Time="12:00"
+                                    Format="hh:mm tt"
                                     HorizontalOptions="CenterAndExpand"
                                     TextColor="#009e9d"
                                     FontAttributes="Bold"   
@@ -158,6 +159,7 @@
                                     x:Name="ReturnTimePicked"  
                                     Time="12:00"            
                                     HorizontalOptions="CenterAndExpand"
+                                    Format="hh:mm tt"
                                     TextColor="#009e9d"
                                     FontAttributes="Bold"   
                                     TranslationX="15"/>

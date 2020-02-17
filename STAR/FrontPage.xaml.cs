@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Net.Http;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Data.SqlClient;
+using STAR.Utilities;
 
 namespace STAR
 {
@@ -22,16 +24,7 @@ namespace STAR
             Online_SID = SID0;              // Initialize StarID
             Online_lastname = lastname0;    // Initialize Lastname
             RetrieveAccount();              // Retrieve and display account info
-            // Wait for User to click on the next page to navigate
-            NavigateCommand = new Command<Type>(async (Type pageType) =>
-            {
-                Page page = (Page)Activator.CreateInstance(pageType);
-                await Navigation.PushAsync(page);
-            });
-            BindingContext = this;
         }
-
-        public ICommand NavigateCommand { private set; get; }
 
         public void RetrieveAccount()
         {
@@ -64,6 +57,31 @@ namespace STAR
             }
             Display_Name.Text = Online_firstname + " " + Online_lastname;
             Display_ID.Text = Online_SID;
+        }
+
+        async void OnNewClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NewTripPage(Online_SID));
+        }
+        async void OnRepeatClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TripHistory());
+        }
+        async void OnPendingClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PendingTripPage());
+        }
+        async void OnUpcomingClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Upcoming());
+        }
+        async void OnCancelClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PendingTripPage());
+        }
+        async void OnSettingsClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Settings());
         }
     }
 }

@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STAR.Android", "STAR.Androi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STAR.iOS", "STAR.iOS\STAR.iOS.csproj", "{F151A416-87DF-45B1-A796-DB9824A03C34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STAR", "STAR\STAR.csproj", "{2D65EE24-7571-4391-A759-D4E4387DA70C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STAR", "STAR\STAR.csproj", "{2D65EE24-7571-4391-A759-D4E4387DA70C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STARAPI", "..\STARAPI\STARAPI.csproj", "{AC60BA9C-BF34-4E7F-96DA-E2BA5698604D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +75,18 @@ Global
 		{2D65EE24-7571-4391-A759-D4E4387DA70C}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{2D65EE24-7571-4391-A759-D4E4387DA70C}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{2D65EE24-7571-4391-A759-D4E4387DA70C}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{AC60BA9C-BF34-4E7F-96DA-E2BA5698604D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC60BA9C-BF34-4E7F-96DA-E2BA5698604D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC60BA9C-BF34-4E7F-96DA-E2BA5698604D}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{AC60BA9C-BF34-4E7F-96DA-E2BA5698604D}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{AC60BA9C-BF34-4E7F-96DA-E2BA5698604D}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{AC60BA9C-BF34-4E7F-96DA-E2BA5698604D}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{AC60BA9C-BF34-4E7F-96DA-E2BA5698604D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC60BA9C-BF34-4E7F-96DA-E2BA5698604D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC60BA9C-BF34-4E7F-96DA-E2BA5698604D}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{AC60BA9C-BF34-4E7F-96DA-E2BA5698604D}.Release|iPhone.Build.0 = Release|Any CPU
+		{AC60BA9C-BF34-4E7F-96DA-E2BA5698604D}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{AC60BA9C-BF34-4E7F-96DA-E2BA5698604D}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

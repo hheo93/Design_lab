@@ -100,14 +100,12 @@
                     <Button  Text="Repeat"            Grid.Row="0"        Grid.Column="0"     
                              Style="{StaticResource TripButton}" 
                              BackgroundColor="#ffaa00"
-                             Command="{Binding NavigateCommand}"
-                             CommandParameter="{x:Type local:TripHistory}"/>
+                             Clicked="OnRepeatClicked"/>
 
                     <Button  Text="New"               Grid.Row="0"        Grid.Column="1"      
                              Style="{StaticResource TripButton}"
                              BackgroundColor="ForestGreen"
-                             Command="{Binding NavigateCommand}"
-                             CommandParameter="{x:Type local:NewTripPage}"/>
+                             Clicked="OnNewClicked"/>
 
 
                 </Grid>
@@ -131,14 +129,12 @@
                     <Button  Text="Pending"       Grid.Row="0"        Grid.Column="0"     
                              Style="{StaticResource TripButton}" 
                              BackgroundColor="#ffaa00"
-                             Command="{Binding NavigateCommand}"
-                             CommandParameter="{x:Type local:PendingTripPage}"/>
+                             Clicked="OnPendingClicked"/>
 
                     <Button  Text="Upcoming"            Grid.Row="0"        Grid.Column="1"     
                              Style="{StaticResource TripButton}"
                              BackgroundColor="ForestGreen" FontSize="33"
-                             Command="{Binding NavigateCommand}"
-                             CommandParameter="{x:Type local:Upcoming}"/>
+                             Clicked="OnUpcomingClicked"/>
                 </Grid>
 
                 <!-- Button Header -->
@@ -159,13 +155,11 @@
 
                     <Button  Text="Cancel"            Grid.Row="0"        Grid.Column="1"     
                              Style="{StaticResource TripButton}"    BackgroundColor="#ff3434"
-                             Command="{Binding NavigateCommand}"
-                             CommandParameter="{x:Type local:PendingTripPage}"/>
+                             Clicked="OnCancelClicked"/>
 
                     <Button  Text="Settings"           Grid.Row="0"        Grid.Column="0"     
                              Style="{StaticResource TripButton}"    BackgroundColor="#282828"
-                             Command="{Binding NavigateCommand}"
-                             CommandParameter="{x:Type local:Settings}"/>
+                             Clicked="OnSettingsClicked"/>
                 </Grid>
 
             </Grid>

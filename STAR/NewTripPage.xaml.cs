@@ -15,15 +15,17 @@ namespace STAR
     public partial class NewTripPage : ContentPage
     {
         Dictionary<string, string> TableInfo = new Dictionary<string, string>();
-        
-        public NewTripPage()
+        string ONLINE_SID;
+        public NewTripPage(string O_SID)
         {
             InitializeComponent();
+            ONLINE_SID = O_SID;
         }
 
         async void OnConfirmedAsync(object sender, EventArgs args)
         {
-            string temp = PickupDateSelector.Date.ToShortDateString();
+            string temp = PickupDateSelector.Date.ToShortDateString() + " - " + PickupTimeSelector.Time.ToString();
+            string Rtemp = ReturnDatePicked.Date.ToShortDateString() + " - " + ReturnTimePicked.Time.ToString();
             string message;
             message = "Pick up: " + CurrAddress.Text
                     + Environment.NewLine + Environment.NewLine
@@ -33,25 +35,15 @@ namespace STAR
                     + Environment.NewLine + Environment.NewLine
                     + "Return: " + ReturnAddress.Text
                     + Environment.NewLine + Environment.NewLine
-                    + "Additional Instructions: " + YesPCA.ToString();
+                    + "Additional Instructions: ";
 
             bool answer = await DisplayAlert("Verify Information:", message, "Confirm", "Cancel");
 
-            if (answer)
+            if(answer)
             {
-                TableInfo.Add("PUAddress", CurrAddress.Text);
-                TableInfo.Add("PUTime", temp);
-                TableInfo.Add("DOAddress", DestAddress.Text);
-                TableInfo.Add("RAddress", ReturnAddress.Text);
-                TableInfo.Add("RTime", ReturnDatePicked.Date.ToShortDateString());
-                TableInfo.Add("PCA", YesPCA.ToString());
-                TableInfo.Add("Payment", "Ticket");
-                TableInfo.Add("Comments", Comments.Text);
-
-                var content = new FormUrlEncodedContent(TableInfo);
-                var response = await HTTPClientInstance.client.PostAsync("https://paratransitservices.azurewebsites.net/newtrip", content);
-                var responseString = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(responseString);
+                string url = "?PAddress="+CurrAddress.Text+"&PTime="+temp+"&DAddress="+DestAddress.Text+"&RAddress="+ReturnAddress.Text+ "&RTime="+Rtemp+ "&PCA=no&Pay=ticket&comments="+Comments.Text+ "&STARID="+ONLINE_SID;
+                var responseString = HTTPClientInstance.client.GetAsync("https://paratransitservices.azurewebsites.net/newtrip"+url);
+                _ = Application.Current.MainPage.Navigation.PopAsync();
             }
         }
     }
