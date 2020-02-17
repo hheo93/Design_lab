@@ -184,6 +184,7 @@
                         <CheckBox   Grid.Row="1"      
                                     HorizontalOptions="Start"     
                                     Margin="60,0,0,0"           Scale="1.5"
+                                    x:Name="YesPCA"
                                     IsChecked="False" />
 
                         <Label      Grid.Row="1"
@@ -195,6 +196,7 @@
 
                         <CheckBox   Grid.Row="1"      
                                     HorizontalOptions="End"
+                                    x:Name="NoPCA"
                                     Margin="0,0,30,0"           Scale="1.5"
                                     IsChecked="False"           />
 

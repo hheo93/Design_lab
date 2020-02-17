@@ -138,7 +138,7 @@
                              Style="{StaticResource TripButton}"
                              BackgroundColor="ForestGreen" FontSize="33"
                              Command="{Binding NavigateCommand}"
-                             CommandParameter="{x:Type local:PendingTripPage}"/>
+                             CommandParameter="{x:Type local:Upcoming}"/>
                 </Grid>
 
                 <!-- Button Header -->
